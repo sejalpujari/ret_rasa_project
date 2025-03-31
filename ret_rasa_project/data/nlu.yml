@@ -1,0 +1,64 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - hey there
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - feeling down
+
+- intent: ask_topic
+  examples: |
+    - What is [artificial intelligence](topic)
+    - Tell me about [machine learning](topic)
+    - What is [programming](topic)
+    - Tell me something about [chatbots](topic)
+    - Can you explain [Rasa](topic)
+    - What do you know about [programming](topic)
+    - Information on [rasa](topic)
+    - I want to learn about [artificial intelligence](topic)

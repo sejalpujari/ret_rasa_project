@@ -1,0 +1,62 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - ask_topic
+
+entities:
+  - topic
+
+slots:
+  topic:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: topic
+
+responses:
+  utter_greet:
+    - text: "Hello! I'm an information retrieval assistant. What topic would you like to know about?"
+
+  utter_goodbye:
+    - text: "Goodbye! Feel free to ask me for information anytime."
+
+  utter_happy:
+    - text: "Great! I'm glad to hear that."
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_default:
+    - text: "I don't have information on that topic yet. Would you like to know about programming, machine learning, Rasa, artificial intelligence, or chatbots?"
+
+  utter_info_programming:
+    - text: "Programming is the process of creating a set of instructions that tell a computer how to perform a task."
+
+  utter_info_machine_learning:
+    - text: "Machine learning is a branch of artificial intelligence that focuses on building systems that learn from data."
+
+  utter_info_rasa:
+    - text: "Rasa is an open-source framework for building conversational AI assistants and chatbots."
+
+  utter_info_artificial_intelligence:
+    - text: "Artificial intelligence is the simulation of human intelligence processes by machines."
+
+  utter_info_chatbots:
+    - text: "Chatbots are computer programs designed to simulate conversation with human users."
+
+actions:
+  - action_get_information
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
